@@ -11,5 +11,4 @@ os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
 
 logging.basicConfig(filename=log_file_path, format=FORMAT, level=logging.INFO)
 
-log = logging.getLogger()
-
+# log = logging.getLogger()
