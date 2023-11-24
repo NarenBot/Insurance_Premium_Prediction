@@ -7,6 +7,7 @@ from src.logger import logging
 from src.exception import CustomException
 from sklearn.model_selection import train_test_split
 from src.utils import missing_treatment
+from src.components.data_transformation import DataTransformation
 
 
 @dataclass
@@ -46,6 +47,7 @@ class DataIngestion:
                 self.data_ingestion_config.test_data_path, header=True, index=False
             )
 
+            logging.info("All data files are saved.")
             return (
                 self.data_ingestion_config.train_data_path,
                 self.data_ingestion_config.test_data_path,
@@ -55,7 +57,11 @@ class DataIngestion:
             raise CustomException(e, sys)
 
 
-if __name__ == "__main__":
-    logging.info("Data ingestion started.")
-    obj = DataIngestion()
-    obj.initiate_data_ingestion()
+# if __name__ == "__main__":
+#     logging.info("Data ingestion started.")
+#     obj = DataIngestion()
+#     train_data, test_data = obj.initiate_data_ingestion()
+
+#     logging.info("Data transformation started.")
+#     obj2 = DataTransformation()
+#     obj2.initiate_data_transformation(train_data, test_data)

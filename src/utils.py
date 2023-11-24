@@ -20,7 +20,7 @@ def missing_treatment(missing_df):
 
 def save_object(obj, file_path):
     try:
-        os.makedirs(os.path.join("artifacts", file_path), exist_ok=True)
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, "wb") as file:
             dill.dump(obj=obj, file=file)
     except Exception as e:
