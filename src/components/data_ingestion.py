@@ -55,7 +55,7 @@ class DataIngestion:
             raise CustomException(e, sys)
 
 
-# if __name__ == "__main__":
-#     logging.info("Data ingestion started.")
-#     obj = DataIngestion()
-#     obj.initiate_data_ingestion()
+if __name__ == "__main__":
+    logging.info("Data ingestion started.")
+    obj = DataIngestion()
+    obj.initiate_data_ingestion()
