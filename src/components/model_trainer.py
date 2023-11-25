@@ -39,5 +39,7 @@ class ModelTrainer:
             save_object(best_model, self.model_trainer_config.model_path)
             logging.info("Model object has saved.")
 
+            return tuned_score
+
         except Exception as e:
             raise CustomException(e, sys)
