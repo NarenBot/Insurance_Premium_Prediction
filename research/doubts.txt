@@ -1,0 +1,5 @@
+1. Do we need to apply each model on GridsearchCV or we need to find the best model then apply on GridsearchCV ? Which approach is best ?
+
+2. Slice the values either from dataframe or from array is good ?
+
+3. 

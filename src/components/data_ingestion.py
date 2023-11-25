@@ -8,6 +8,7 @@ from src.exception import CustomException
 from sklearn.model_selection import train_test_split
 from src.utils import missing_treatment
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 
 @dataclass
@@ -57,11 +58,15 @@ class DataIngestion:
             raise CustomException(e, sys)
 
 
-# if __name__ == "__main__":
-#     logging.info("Data ingestion started.")
-#     obj = DataIngestion()
-#     train_data, test_data = obj.initiate_data_ingestion()
+if __name__ == "__main__":
+    logging.info("Data ingestion started.")
+    obj = DataIngestion()
+    train_data, test_data = obj.initiate_data_ingestion()
 
-#     logging.info("Data transformation started.")
-#     obj2 = DataTransformation()
-#     obj2.initiate_data_transformation(train_data, test_data)
+    logging.info("Data transformation started.")
+    obj2 = DataTransformation()
+    train_arr, test_arr, _ = obj2.initiate_data_transformation(train_data, test_data)
+
+    logging.info("Model trainer started.")
+    obj3 = ModelTrainer()
+    obj3.initiate_model_trainer(train_arr, test_arr)

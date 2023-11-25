@@ -83,6 +83,7 @@ class DataTransformation:
             )
             input_feature_test_arr = preprocessor_obj.transform(input_feature_test)
             logging.info(f"Scaled data sample: {input_feature_test_arr[0]}")
+            logging.info(f"Number of features: {len(input_feature_test_arr[0])}")
 
             train_arr = np.c_[input_feature_train_arr, target_feature_train]
             test_arr = np.c_[input_feature_test_arr, target_feature_test]
