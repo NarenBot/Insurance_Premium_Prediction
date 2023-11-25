@@ -9,7 +9,6 @@ def get_requirements(file_path):
         requirements = [req.replace("\n", "") for req in requirements]
         if "-e ." in requirements:
             requirements.remove("-e .")
-
     return requirements
 
 
