@@ -1,5 +1,5 @@
 import sys
-from flask import Flask, request, render_template, url_for
+from flask import Flask, request, render_template
 
 from src.logger import logging
 from src.exception import CustomException
