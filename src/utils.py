@@ -63,7 +63,7 @@ def get_best_model(X_train, X_test, y_train, y_test):
             "Ada_boost_reg": AdaBoostRegressor(),
             "Gradient_boost_reg": GradientBoostingRegressor(),
         }
-
+        
         model_report: dict = {}
         for i in range(len(list(models))):
             model = list(models.values())[i]

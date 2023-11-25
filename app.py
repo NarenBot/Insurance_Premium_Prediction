@@ -4,6 +4,7 @@ from flask import Flask, request, render_template, url_for
 from src.logger import logging
 from src.exception import CustomException
 from src.pipeline.predict_pipeline import PredictPipeline, CustomData
+from src.pipeline.train_pipeline import TrainPipeline
 
 app = Flask(__name__)
 
@@ -11,6 +12,15 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+@app.route("/train")
+def training():
+    train = TrainPipeline()
+    tuned_score = train.run_pipeline()
+    accuracy = str(round(tuned_score, 2) * 100)[:2]
+    message = f"Model trained successfully with accuracy:{accuracy}%"
+    return render_template("index.html", message=message)
 
 
 @app.route("/predict", methods=["GET", "POST"])
@@ -31,7 +41,7 @@ def prediction():
             result = preds.prediction(dataframe)
             return render_template(
                 "home.html",
-                results="Predicted Insurance Amount : {:.2f}".format(float(result[0])),
+                results="Predicted Insurance Amount ₹ {:.2f}".format(float(result[0])),
             )
         except Exception as e:
             raise CustomException(e, sys)

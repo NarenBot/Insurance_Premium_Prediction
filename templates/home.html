@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insurance_Premium_Prediction</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" type="text/css" />
+    <title>Insurance: Prediction</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style_home.css')}}" type="text/css" />
 
 </head>
 
@@ -45,9 +45,12 @@
         </select>
 
         <button type="submit">Submit</button>
+
         <div>
             <br>
-            {{ results }}
+            <b>{{ results }}</b>
+            <br><br>
+            <a id="single" type="button" href="{{url_for('index')}}">Back</a>
         </div>
     </form>
 </body>

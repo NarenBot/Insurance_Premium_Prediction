@@ -1,7 +1,32 @@
-<div>
-    <h1>
-        <center> Welcome to the prediction world for the premium of the personal for health insurance.</center>
-    </h1>
-    <img src="static\images\Insurance.jpg" alt="insurance" />
+<!DOCTYPE html>
+<html lang="en">
 
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance: Home</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style_index.css')}}" type="text/css" />
+</head>
+
+<body>
+    <h1>
+        ** Welcome to the prediction world for the Premium of the personal for Health Insurance **
+    </h1>
+
+    <div class="content">
+        <ul>
+            <li>
+                <a id="single" type="button" href="{{url_for('training')}}">Training Pipeline...Run</a>
+            </li>
+            <br>
+            {{message}}
+            <br><br>
+            <li>
+                <a id="batch" type="button" href="{{url_for('prediction')}}">Predict With Your Own Data!!!</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
