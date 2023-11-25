@@ -6,7 +6,8 @@ The insurance.csv dataset contains 1338 observations (rows) and 7 features (colu
 
 ### Please check the link below:
 
-<b>[*Deployment Link Live*](http://insurance-env-1.eba-ztjhym2p.ap-south-1.elasticbeanstalk.com/) </b>
+<b>[*Deployment Link Live-Ec2*](http://15.206.82.38:8080/) </b>
+<b>[*Deployment Link Live-Beanstalk*](http://insurance-env-1.eba-ztjhym2p.ap-south-1.elasticbeanstalk.com/) 
+</b>
 
-ECR_URI: 043699755135.dkr.ecr.ap-south-1.amazonaws.com/insurance-premium
-AWS_REGION: ap-south-1
+
