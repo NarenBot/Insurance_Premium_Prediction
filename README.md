@@ -6,7 +6,7 @@ The insurance.csv dataset contains 1338 observations (rows) and 7 features (colu
 
 ### Please check the link below:
 EC2 instance with ECR using github Actions:
-<b>[*Deployment Link Live-Ec2*](http://15.206.82.38:8080/) </b>
+<b>[*Deployment Link Live-Ec2*](http://13.233.230.193:8080/) </b>
 <br>
 Elastic Beanstalk:
 <b>[*Deployment Link Live-Beanstalk*](http://insurance-env-1.eba-ztjhym2p.ap-south-1.elasticbeanstalk.com/) 
