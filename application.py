@@ -6,7 +6,9 @@ from src.exception import CustomException
 from src.pipeline.predict_pipeline import PredictPipeline, CustomData
 from src.pipeline.train_pipeline import TrainPipeline
 
-app = Flask(__name__)
+application = Flask(__name__)
+
+app = application
 
 
 @app.route("/")
