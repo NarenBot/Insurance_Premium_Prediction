@@ -11,8 +11,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    message = f"Model trained successfully with accuracy: 88%"
-    return render_template("index.html", message=message)
+    # message = f"Model trained successfully with accuracy: 88%"
+    return render_template("index.html")
 
 
 @app.route("/train")

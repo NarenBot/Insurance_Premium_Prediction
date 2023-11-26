@@ -42,7 +42,7 @@ Elastic Beanstalk:
 
 ### Flask, Docker and  AWS Deployment:
 * Build a Flask App with Docker file.
-* Deployed on Heroku with CI/CD pipeline through Github actions.
+* Deployed on AWS-EC2 with CI/CD pipeline through Github actions.
 
 <p align="right">(<a href="#top">back to top</a>)</p> 
 
