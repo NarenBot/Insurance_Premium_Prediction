@@ -12,4 +12,9 @@ Elastic Beanstalk:
 <b>[*Deployment Link Live-Beanstalk*](http://insurance-env-1.eba-ztjhym2p.ap-south-1.elasticbeanstalk.com/) 
 </b>
 
+#### Home Screen:
+![Screenshot_home](https://github.com/NarenBot/Insurance_Premium_Prediction/assets/58779483/83c3b374-07dc-4c51-a913-d711b6746517)
 
+#### Prediction Screen:
+
+![Screenshot_predict](https://github.com/NarenBot/Insurance_Premium_Prediction/assets/58779483/0c6566d7-a69f-438f-a484-4d8905bb5804)
