@@ -7,3 +7,4 @@ ipykernel
 dill
 PyYAML
 Flask
+mlflow==2.8.0

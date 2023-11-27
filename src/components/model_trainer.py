@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 from src.exception import CustomException
 from src.logger import logging
-from src.utils import save_object, get_best_model, finetune_best_model
+from src.utils import save_object, get_best_model, finetune_best_model, mlflow_tracking
 
 
 @dataclass
@@ -31,10 +31,14 @@ class ModelTrainer:
             logging.info(model_report)
             logging.info(f"Best_Model: {best_model}, Best_Score: {best_score}")
 
-            tuned_score = finetune_best_model(
+            best_parameters, tuned_score = finetune_best_model(
                 X_train, X_test, y_train, y_test, best_model_name, best_model
             )
             logging.info(f"Tuned_Model: {best_model}, Tuned_Score: {tuned_score}")
+
+            tracking = mlflow_tracking(
+                X_train, X_test, y_train, y_test, best_model, best_parameters
+            )
 
             save_object(best_model, self.model_trainer_config.model_path)
             logging.info("Model object has saved.")

@@ -155,8 +155,10 @@ cython_debug/
 # Miscellaneous
 *.psd
 *.ebextensions/
-*miscellaneous/
-*workflows/
+miscellaneous/
+workflows/
+mlruns/
+
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
