@@ -145,8 +145,13 @@ def mlflow_tracking(X_train, X_test, y_train, y_test, best_model, best_parameter
 
             predictions = best_model.predict(X_train)
             signature = infer_signature(X_train, predictions)
+            remote_server_uri = (
+                "https://dagshub.com/NarenBot/Insurance_Premium_Prediction.mlflow"
+            )
+            mlflow.set_tracking_uri = remote_server_uri
 
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+            logging.info(f"Tracking_url_type_store: {tracking_url_type_store}")
             if tracking_url_type_store != "file":
                 mlflow.sklearn.log_model(
                     best_model,

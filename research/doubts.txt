@@ -10,7 +10,10 @@ except Exception as e:
 
 
 
-
+MLFLOW_TRACKING_URI=https://dagshub.com/NarenBot/Insurance_Premium_Prediction.mlflow \
+MLFLOW_TRACKING_USERNAME=NarenBot \
+MLFLOW_TRACKING_PASSWORD=50fb8ba13b044b1ef571a988c3a51e18bce1fa01 \
+python script.py
 
 
 
