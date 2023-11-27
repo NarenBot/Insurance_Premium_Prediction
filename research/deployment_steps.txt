@@ -28,7 +28,7 @@ option_settings:
     - EC2 choose instance as Ubuntu with t2.medium
     - Create a key-pair
     - Allow HTTP and HTTPS traffic
-    - Need to install the below command in EC2 connect:
+    - Need to install the below command in EC2 connect CLI:
       - sudo apt-get update -y
       - sudo apt-get upgrade
       - curl -fsSL https://get.docker.com -o get-docker.sh

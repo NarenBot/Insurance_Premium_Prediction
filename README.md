@@ -14,6 +14,19 @@ Elastic Beanstalk:
 <b>[*Deployment Link Live-Beanstalk*](http://insurance-env-1.eba-ztjhym2p.ap-south-1.elasticbeanstalk.com/) 
 </b>
 
+### Documentation:
+
+[High Level Design](https://github.com/NarenBot/Insurance_Premium_Prediction/blob/main/documents/High%20Level%20Document.pdf)
+
+[Low Level Design](https://github.com/NarenBot/Insurance_Premium_Prediction/blob/main/documents/Low%20Level%20Document.pdf)
+
+[Project Architecture](https://github.com/NarenBot/Insurance_Premium_Prediction/blob/main/documents/Project%20Architecture.pdf)
+
+[Project Wireframe:](https://github.com/NarenBot/Insurance_Premium_Prediction/blob/main/documents/Project%20Wireframe.pdf)
+
+[Detailed Project Report](https://github.com/NarenBot/Insurance_Premium_Prediction/blob/main/documents/Detailed%20Project%20Report.pdf)
+
+
 <p align="right">(<a href="#top">back to top</a>)</p> 
 
 ### Steps Taken:
