@@ -27,7 +27,8 @@ class DataIngestion:
             )
 
             logging.info("Getting the source data...")
-            df = pd.read_csv(r"research/insurance.csv")
+            source_path = os.path.join("data_raw", "insurance.csv")
+            df = pd.read_csv(source_path)
 
             df = missing_treatment(df)
             logging.info(f"Treatment for any missing data.\n{df.isnull().sum()}")
