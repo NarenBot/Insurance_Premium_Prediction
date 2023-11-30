@@ -8,3 +8,5 @@ dill
 PyYAML
 Flask
 mlflow==2.8.0
+streamlit
+streamlit-authenticator
