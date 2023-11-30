@@ -1,0 +1,17 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@gmail.com
+      name: Administrator
+      password: "$2b$12$M0dTWbjtQOtSZlKS1N50YubCIgAVHu2UyYZy6n5xh7qMynK0T/Rtu"
+    narenbot:
+      email: narendas10@gmail.com
+      name: Narendran
+      password: "$2b$12$R/mcTxX38f0E1d44PhCihenji2WVRogWeU5nqGMfIAsxHMuHz2YRq"
+cookie:
+  expiry_days: 30
+  key: some_signature_key # Must be string
+  name: some_cookie_name
+preauthorized:
+  emails:
+  - narendas10@gmail.com

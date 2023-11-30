@@ -2,11 +2,8 @@
 
 2. Slice the values either from dataframe or from array is good ?
 
-3. 
-try:
-    pass
-except Exception as e:
-    raise CustomException(e, sys)
+3. C:\Users\Naren\iNeuron\Docker_Git .... Check this and combine the notes ?
+
 
 
 

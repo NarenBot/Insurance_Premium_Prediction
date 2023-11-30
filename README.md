@@ -57,6 +57,11 @@ Elastic Beanstalk:
 * Build a Flask App with Docker file.
 * Deployed on AWS-EC2 with CI/CD pipeline through Github actions.
 
+### ML-Flow and DVC [facilitate collaboration ml-lifecycle]:
+- Used MLflow for experiment tracking, logging metrics, parameters, and artifacts during model training.
+- Used DVC to version control and manage your large datasets efficiently.
+- By integrating MLflow and DVC, we can create a more robust and reproducible machine learning workflow that addresses both code and data versioning concerns.
+
 <p align="right">(<a href="#top">back to top</a>)</p> 
 
 #### Home Screen:
