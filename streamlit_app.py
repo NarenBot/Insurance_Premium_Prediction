@@ -7,6 +7,7 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 
+
 from src.logger import logging
 from src.exception import CustomException
 from src.pipeline.train_pipeline import TrainPipeline
@@ -15,7 +16,7 @@ from src.pipeline.predict_pipeline import PredictPipeline, CustomData
 
 st.set_page_config(page_title="Insurance::Home")
 
-with open(r"config\auth_config.yml") as file:
+with open(r"config/auth_config.yml") as file:
     config = yaml.load(file, Loader=SafeLoader)
 
 # Config.yml
