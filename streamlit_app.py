@@ -99,9 +99,11 @@ elif st.session_state["authentication_status"] == True:
             )
             prediction = st.form_submit_button("Submit")
 
-        if prediction:
-            input_data = CustomData(age, sex, bmi, children, smoker, region)
-            dataframe = input_data.get_data_as_dataframe()
-            preds = PredictPipeline()
-            results = preds.prediction(dataframe)
-            st.success("Predicted Insurance Amount ₹ {:.2f}".format(float(results[0])))
+            if prediction:
+                input_data = CustomData(age, sex, bmi, children, smoker, region)
+                dataframe = input_data.get_data_as_dataframe()
+                preds = PredictPipeline()
+                results = preds.prediction(dataframe)
+                st.success(
+                    "Predicted Insurance Amount ₹ {:.2f}".format(float(results[0]))
+                )
