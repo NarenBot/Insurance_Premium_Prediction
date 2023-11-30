@@ -75,6 +75,8 @@ elif st.session_state["authentication_status"] == True:
     # Prediction Pipeline page
     if page == "Prediction Pipeline":
         st.markdown("***")
+        st.info("All fields are mandatory!")
+
         # Form Components
         with st.form(key="my_form", clear_on_submit=True):
             age = st.number_input("Please enter your age.", 0, 100)
@@ -103,5 +105,3 @@ elif st.session_state["authentication_status"] == True:
             preds = PredictPipeline()
             results = preds.prediction(dataframe)
             st.success("Predicted Insurance Amount ₹ {:.2f}".format(float(results[0])))
-        else:
-            st.info("All fields are mandatory!")
