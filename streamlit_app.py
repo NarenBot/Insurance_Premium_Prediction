@@ -17,13 +17,13 @@ from src.database import DatabaseConnect
 
 st.set_page_config(page_title="Insurance::Home")
 
-# HIDE GITHUB ICON
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
+# # HIDE GITHUB ICON
+# hide_github_icon = """
+# #GithubIcon {
+#   visibility: hidden;
+# }
+# """
+# st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 # CONFIG.yml
 with open(r"config/auth_config.yml") as file:
