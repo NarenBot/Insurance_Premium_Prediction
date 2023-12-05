@@ -140,7 +140,9 @@ elif st.session_state["authentication_status"] == True:
                     region,
                     round(float(results[0]), 2),
                 )
-        st.info("To view our database, kindly navigate to the 'Show Dataframe' page.")
+                st.info(
+                    "To view our database, kindly navigate to the 'Show Dataframe' page."
+                )
 
     # SHOW DATAFRAME PAGE
     if page == "Show Dataframe":
@@ -150,7 +152,7 @@ elif st.session_state["authentication_status"] == True:
         data, cursor = connect.display_user_database()
         columns = [desc[0] for desc in cursor.description]
         df = pd.DataFrame(data, columns=columns)
-        st.dataframe(df.tail())
+        st.dataframe(df)
 
     if page == "Contact":
         st.markdown("***")
