@@ -152,7 +152,7 @@ elif st.session_state["authentication_status"] == True:
         data, cursor = connect.display_user_database()
         columns = [desc[0] for desc in cursor.description]
         df = pd.DataFrame(data, columns=columns)
-        st.dataframe(df)
+        st.dataframe(df.tail())
 
     if page == "Contact":
         st.markdown("***")
