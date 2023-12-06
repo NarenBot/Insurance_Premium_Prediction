@@ -18,11 +18,6 @@ from src.database import DatabaseConnect
 st.set_page_config(page_title="Insurance::Home")
 
 
-class SessionState:
-    def __init__(self, **kwargs):
-        self.__dict__.update(kwargs)
-
-
 # CONFIG.yml
 with open(r"config/auth_config.yml") as file:
     config = yaml.load(file, Loader=SafeLoader)
@@ -93,7 +88,7 @@ elif st.session_state["authentication_status"] == True:
         st.info("All fields are mandatory!")
 
         # FORM COMPONENTS
-        state = SessionState(form_submitted=False)
+        form_submit = False
         with st.form(key="my_form", clear_on_submit=True):
             name = st.text_input(
                 "Please enter your name.", placeholder="Your name please..."
@@ -117,10 +112,9 @@ elif st.session_state["authentication_status"] == True:
                 placeholder="Choose...",
             )
             prediction = st.form_submit_button("Submit")
-            if prediction:
-                state.form_submitted = True
+            form_submit = True if prediction else False
 
-        if state.form_submitted:
+        if form_submit:
             input_data = CustomData(age, sex, bmi, children, smoker, region)
             dataframe = input_data.get_data_as_dataframe()
             preds = PredictPipeline()
