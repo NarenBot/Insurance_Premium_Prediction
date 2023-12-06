@@ -8,8 +8,8 @@ The insurance.csv dataset contains 1338 observations (rows) and 7 features (colu
 
 ### Please check the link below:
 Streamlit Deployment - *[Current Live Link]*: 
-<b>[Streamlit-app*](https://insurancepremiumprediction.streamlit.app/) </b>
-<br>
+<b>[Streamlit-app*](https://insurancepremiumprediction.streamlit.app/)</b>
+<br><br>
 EC2 instance with ECR using github Actions:
 [*Deployment Link Live-Ec2*](http://13.233.230.193:8080/)
 <br>
