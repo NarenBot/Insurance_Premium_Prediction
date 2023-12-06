@@ -140,7 +140,6 @@ elif st.session_state["authentication_status"] == True:
                 region,
                 round(float(results[0]), 2),
             )
-
             st.info(
                 "To view our database, kindly navigate to the 'Show Dataframe' page."
             )
