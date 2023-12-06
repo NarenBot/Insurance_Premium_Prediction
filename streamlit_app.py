@@ -119,29 +119,29 @@ elif st.session_state["authentication_status"] == True:
             )
             prediction = st.form_submit_button("Submit")
 
-            if prediction:
-                input_data = CustomData(age, sex, bmi, children, smoker, region)
-                dataframe = input_data.get_data_as_dataframe()
-                preds = PredictPipeline()
-                results = preds.prediction(dataframe)
-                st.success(
-                    "Predicted Insurance Amount ₹ {:.2f}".format(float(results[0]))
-                )
+        if prediction:
+            input_data = CustomData(age, sex, bmi, children, smoker, region)
+            dataframe = input_data.get_data_as_dataframe()
+            preds = PredictPipeline()
+            results = preds.prediction(dataframe)
+            st.success("Predicted Insurance Amount ₹ {:.2f}".format(float(results[0])))
 
-                # DATABASE CONNECTION
-                connect = DatabaseConnect()
-                insert_data = connect.insert_user_data(
-                    name,
-                    age,
-                    sex,
-                    bmi,
-                    children,
-                    smoker,
-                    region,
-                    round(float(results[0]), 2),
-                )
+            # DATABASE CONNECTION
+            connect = DatabaseConnect()
+            insert_data = connect.insert_user_data(
+                name,
+                age,
+                sex,
+                bmi,
+                children,
+                smoker,
+                region,
+                round(float(results[0]), 2),
+            )
 
-        st.info("To view our database, kindly navigate to the 'Show Dataframe' page.")
+            st.info(
+                "To view our database, kindly navigate to the 'Show Dataframe' page."
+            )
 
     # SHOW DATAFRAME PAGE
     if page == "Show Dataframe":
