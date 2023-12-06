@@ -95,6 +95,7 @@ elif st.session_state["authentication_status"] == True:
         st.info("All fields are mandatory!")
 
         # FORM COMPONENTS
+        form_submit = False
         with st.form(key="my_form", clear_on_submit=True):
             name = st.text_input(
                 "Please enter your name.", placeholder="Your name please..."
@@ -118,8 +119,9 @@ elif st.session_state["authentication_status"] == True:
                 placeholder="Choose...",
             )
             prediction = st.form_submit_button("Submit")
+            form_submit = True if prediction else False
 
-        if prediction:
+        if form_submit:
             input_data = CustomData(age, sex, bmi, children, smoker, region)
             dataframe = input_data.get_data_as_dataframe()
             preds = PredictPipeline()
